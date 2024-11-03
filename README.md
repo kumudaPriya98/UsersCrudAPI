@@ -3,7 +3,7 @@ Goal: Implement Restful API using Java Spring FW and apply error handling and HT
 
 
 
-Detailed Steps to develop API in Real World:
+### Detailed Steps to develop API in Real World:
 
 <details>
 <summary> Step-1 Gather Requirements:  </summary>
@@ -102,6 +102,5 @@ Detailed Steps to develop API in Real World:
 * **Performance Testing:** For larger applications, run load tests to identify potential bottlenecks or scalability issues.
 </details>
 
-  
 
 
