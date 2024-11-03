@@ -1,8 +1,6 @@
 # UsersCrudAPI
 Goal: Implement Restful API using Java Spring FW and apply error handling and HTTP status codes.
 
-
-
 ### Detailed Steps to develop API in Real World:
 
 <details>
@@ -102,5 +100,17 @@ Goal: Implement Restful API using Java Spring FW and apply error handling and HT
 * **Performance Testing:** For larger applications, run load tests to identify potential bottlenecks or scalability issues.
 </details>
 
+### Steps followed in UserCrudAPI development:
+Since this is a beginner CRUD API, mainly to understand the important steps in API development and not dealing with a complex problem. 
+We will skip some of the steps in the real development. Main agenda is to understand practical aspects of implementing REST API using Spring Boot Framework.
+1) Requirements Gathering:
+* Create Users with Name, Personal Information like Gender, Phone number
+* Update User Information
+* Delete User
+* User should be able to follow other Users
 
+2) Plan the Data Model and Persistence Layer
+3) Add Service to handle the business logic
+4) Add API Controllers to implement Rest API for User Management Service
+5) Add Error Handling with Appropriate HTTP Status Codes and Logging 
 
