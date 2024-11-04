@@ -109,8 +109,16 @@ We will skip some of the steps in the real development. Main agenda is to unders
 * Delete User
 * User should be able to follow other Users
 
-2) Plan the Data Model and Persistence Layer
-3) Add Service to handle the business logic
-4) Add API Controllers to implement Rest API for User Management Service
-5) Add Error Handling with Appropriate HTTP Status Codes and Logging 
+2) Setup the pom.xml and inital project setup for your Spring Boot Microservice using Spring Initialzr (Spring Project Initializer)
+    * Spring Web (includes Tomcat (serverlet engine) and Spring MVC)
+    * Spring Data JPA
+    * Spring Data Rest
+    * H2 in-memory Database Driver
+    * Lombok
+    * Spring Boot Acutator
+
+3) Plan the Data Model and Persistence Layer
+4) Add Service to handle the business logic
+5) Add API Controllers to implement Rest API for User Management Service
+6) Add Error Handling with Appropriate HTTP Status Codes and Logging 
 
