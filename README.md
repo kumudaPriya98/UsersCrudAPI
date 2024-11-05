@@ -140,10 +140,18 @@ We will skip some of the steps in the real development. Main agenda is to unders
     * Ideally Service layer talks Persistence layer that manages the users data in the DB.
     * But here to keep things simple, here service layer maintains users data.
 
-3) Add API Controllers to implement Rest API for User Management Service
+5) Add API Controllers to implement Rest API for User Management Service
     * Spring Data Rest Vs Spring Data MVC is that Spring Data Rest framework itself handles the controller and no need for controller class:
-        * Application is not using Spring Data Repositories 
+        * Application is not using Spring Data Repositories
         * When we need Service Layer that has business logic, and application is not just for data transfer.
         * Hide Internal data model and need Data Transfer Objects
 
-4) Add Error Handling with Appropriate HTTP Status Codes and Logging
+6) DTO and Request Validation are not required here
+
+7) Add Error Handling with Appropriate HTTP Status Codes and Logging
+
+8) Define Authentication and Authorization
+
+9) Document API
+
+10) Write Tests

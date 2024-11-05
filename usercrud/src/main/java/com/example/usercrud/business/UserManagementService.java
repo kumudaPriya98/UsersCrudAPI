@@ -31,4 +31,14 @@ public class UserManagementService {
     public List<User> getUsers() {
         return new ArrayList(users.values());
     }
+
+
+    public User getUser(String id) {
+        if (users.containsKey(id)) {
+            return users.get(id);
+        }
+
+        throw new RuntimeException("User with id " + id + " does not exisit");
+    }
+
 }
