@@ -116,9 +116,10 @@ We will skip some of the steps in the real development. Main agenda is to unders
     * H2 in-memory Database Driver
     * Lombok
     * Spring Boot Acutator
+    * Spring Doc Open AI (not found on Spring Initializr)
 
-3) Plan the Data Model and Persistence Layer
-4) Add Service to handle the business logic
-5) Add API Controllers to implement Rest API for User Management Service
-6) Add Error Handling with Appropriate HTTP Status Codes and Logging 
+3) Add API Controllers to implement Rest API for User Management Service
+    * Skipped the Data Persistence Step, as in this project we are not planning to store the data.
+    * Skipped the Service layer, as we just have a light weight Rest controller and we dont need service layer in this case.
 
+4) Add Error Handling with Appropriate HTTP Status Codes and Logging 
