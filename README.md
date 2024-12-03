@@ -124,8 +124,6 @@ We will skip some of the steps in the real development. Main agenda is to unders
 * Update User Information
 * Delete User
 * User should be able to put up Posts
-* User can like Posts
-* Keep track of Users who liked each post.
 
 2) Setup the pom.xml and inital project setup for your Spring Boot Microservice using Spring Initialzr (Spring Project Initializer)
     * Spring Web (includes Tomcat (serverlet engine) and Spring MVC)

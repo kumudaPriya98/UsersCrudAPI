@@ -1,3 +1,3 @@
 curl -X 'GET' \
-  'http://localhost:8080/users/a2k12' \
+  'http://localhost:8080/users/abcd' \
   -H 'accept: application/hal+json'
