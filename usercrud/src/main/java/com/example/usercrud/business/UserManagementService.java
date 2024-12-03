@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.example.usercrud.model.Gender;
+import com.example.usercrud.model.Post;
 import com.example.usercrud.model.User;
 import com.example.usercrud.repo.UserRepository;
 
@@ -28,6 +29,18 @@ public class UserManagementService {
         User newUser = new User(id, name, phoneNumber, gender);
         userRepository.save(newUser);
         return newUser;
+    }
+
+    public Post createUserPost(String userId, Post post) {
+        Optional<User> user = userRepository.findById(userId);
+        if (!user.isPresent()) {
+            throw new RuntimeException("User with id " + userId + " does not exisit");
+        }
+        user.get().addPost(post); 
+        userRepository.save(user.get());
+        // Instead of directly returning var post, as it has Id null
+        // Data Transfer Object should be user here
+        return post;
     }
 
     public List<User> getUsers() {

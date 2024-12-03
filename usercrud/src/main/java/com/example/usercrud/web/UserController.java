@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.usercrud.business.UserManagementService;
+import com.example.usercrud.model.Post;
 import com.example.usercrud.model.User;
 
 
@@ -28,6 +29,12 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public User createUser(@RequestBody User user) {
         return userManagementService.createUser(user.getId(), user.getName(), user.getPhoneNumber(), user.getGender());
+    }
+
+    @PostMapping("/{id}/posts/")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Post createUserPost(@PathVariable(value = "id") String userId, @RequestBody Post post ) {
+        return userManagementService.createUserPost(userId, post);
     }
 
     @GetMapping
