@@ -1,41 +1,44 @@
 package com.example.usercrud.business;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
-import java.util.ArrayList;
-
-import com.example.usercrud.model.User;
-import com.example.usercrud.model.Gender;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-@Service
-public class UserManagementService {
-    Map<String, User> users;
+import com.example.usercrud.model.Gender;
+import com.example.usercrud.model.User;
+import com.example.usercrud.repo.UserRepository;
 
-    public UserManagementService() {
-        users = new HashMap<>();
+import jakarta.transaction.Transactional;
+
+@Service
+@Transactional
+public class UserManagementService {
+    UserRepository userRepository;
+
+    public UserManagementService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public User createUser(String id, String name, String phoneNumber, Gender gender) {
-        if (users.containsKey(id)) {
+        if (userRepository.findById(id).isPresent()) {
             throw new RuntimeException("User with id " + id + " already exisits");
         }
 
         User newUser = new User(id, name, phoneNumber, gender);
-        users.put(id, newUser);
+        userRepository.save(newUser);
         return newUser;
     }
 
     public List<User> getUsers() {
-        return new ArrayList(users.values());
+        return userRepository.findAll();
     }
 
 
     public User getUser(String id) {
-        if (users.containsKey(id)) {
-            return users.get(id);
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            return user.get();
         }
 
         throw new RuntimeException("User with id " + id + " does not exisit");

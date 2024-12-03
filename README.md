@@ -123,7 +123,9 @@ We will skip some of the steps in the real development. Main agenda is to unders
 * Create Users with Name, Personal Information like Gender, Phone number
 * Update User Information
 * Delete User
-* User should be able to follow other Users
+* User should be able to put up Posts
+* User can like Posts
+* Keep track of Users who liked each post.
 
 2) Setup the pom.xml and inital project setup for your Spring Boot Microservice using Spring Initialzr (Spring Project Initializer)
     * Spring Web (includes Tomcat (serverlet engine) and Spring MVC)
@@ -134,24 +136,26 @@ We will skip some of the steps in the real development. Main agenda is to unders
     * Spring Boot Acutator
     * Spring Doc Open AI (not found on Spring Initializr)
 
-3) Skip Data Persistence Layer step, just add User Class to model the data
+3) DB Model with ER Diagram
 
-4) Add Simple UserManagementService Layer, that contains the list of users and manages the users list.
-    * Ideally Service layer talks Persistence layer that manages the users data in the DB.
-    * But here to keep things simple, here service layer maintains users data.
+4) Add JPA Entities to represent the DB Tables
 
-5) Add API Controllers to implement Rest API for User Management Service
+5) Add Repository Layer to handle db access of entities. 
+
+6) Add Simple UserManagementService Layer
+
+7) Add API Controllers to implement Rest API for User Management Service
     * Spring Data Rest Vs Spring Data MVC is that Spring Data Rest framework itself handles the controller and no need for controller class:
         * Application is not using Spring Data Repositories
         * When we need Service Layer that has business logic, and application is not just for data transfer.
         * Hide Internal data model and need Data Transfer Objects
 
-6) DTO and Request Validation are not required here
+8) DTO and Request Validation are not required here
 
-7) Add Error Handling with Appropriate HTTP Status Codes and Logging
+98) Add Error Handling with Appropriate HTTP Status Codes and Logging
 
-8) Define Authentication and Authorization
+10) Define Authentication and Authorization
 
-9) Document API
+11) Document API
 
-10) Write Tests
+12) Write Tests

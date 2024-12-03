@@ -40,7 +40,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     public User getUser(@PathVariable(value = "id") String id) {
         return userManagementService.getUser(id);
-    }
+    }  
 
 
 }

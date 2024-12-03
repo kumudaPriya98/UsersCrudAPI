@@ -3,8 +3,8 @@ curl -X 'POST' \
   -H 'accept: application/hal+json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "id": "a2k12",
-  "name": "fdhbkl.e",
+  "id": "abcd",
+  "name": "erttt",
   "phoneNumber": "888800000",
   "gender": "Male"
 }'
